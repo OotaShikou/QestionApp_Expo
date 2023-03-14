@@ -1,0 +1,6 @@
+.env
+REACT_NATIVE_PACKAGER_HOSTNAME = Dockerコンテナ可動端末のIPアドレス
+
+bash
+docker-compose up -d --build
+
