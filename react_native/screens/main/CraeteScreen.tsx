@@ -1,19 +1,20 @@
+import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Button } from 'react-native-paper';
-import {useNavigation} from '@react-navigation/native';
+import { StyleSheet, View } from 'react-native';
+import { Button, Text } from 'react-native-paper';
 
-export default function HomeScreen() {
 
+export default function CreateScreen() {
   const navigation: any = useNavigation();
+
   return (
     <View style={styles.container}>
-      <Text>ホーム画面</Text>
+      <Text>問題を作成するページ</Text>
       <StatusBar style="auto" />
       <Button icon="camera">
         Press me
       </Button>
-      <Button icon="camera" mode="contained" onPress={() => navigation.navigate('Test')}>
+      <Button icon="camera" mode="contained" onPress={() => navigation.push('Test')}>
         Move Test Page
       </Button>
     </View>
@@ -23,7 +24,6 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
